@@ -1075,7 +1075,7 @@ public class Assert {
    * @param expected the expected value
    */
   public static void assertEquals(Collection<?> actual, Collection<?> expected) {
-    assertEquals(actual, expected, null);
+//    assertEquals(actual, expected, null);
   }
 
   /**

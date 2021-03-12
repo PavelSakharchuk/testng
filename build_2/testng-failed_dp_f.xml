@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite thread-count="2" guice-stage="DEVELOPMENT" verbose="0" name="Failed suite [TestNG]" data-provider-thread-count="3">
+  <parameter name="boolean" value="true"/>
+  <parameter name="string" value="Cedric"/>
+  <parameter name="byte" value="43"/>
+  <parameter name="double" value="44.0"/>
+  <parameter name="parameter" value="out"/>
+  <parameter name="factory-param" value="FactoryParam"/>
+  <parameter name="char" value="c"/>
+  <parameter name="short" value="47"/>
+  <parameter name="float" value="45.0"/>
+  <parameter name="first-name" value="Cedric"/>
+  <parameter name="int" value="42"/>
+  <parameter name="long" value="46"/>
+  <listeners>
+    <listener class-name="org.testng.internal.ConsoleReporter"/>
+  </listeners>
+  <test thread-count="2" verbose="0" name="Regression2(failed)">
+    <groups>
+      <run>
+        <exclude name="broken"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="test.factory.issue1041_dp_f.FactoryAnnotatedConstructorExample">
+        <methods>
+          <include name="testMethod"/>
+        </methods>
+      </class> <!-- test.factory.issue1041_dp_f.FactoryAnnotatedConstructorExample -->
+    </classes>
+  </test> <!-- Regression2(failed) -->
+</suite> <!-- Failed suite [TestNG] -->

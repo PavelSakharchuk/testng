@@ -163,6 +163,7 @@ tasks.test {
         testLogging.showStandardStreams = true
         systemProperties = mapOf("test.resources.dir" to "build/resources/test")
         maxHeapSize = "1500m"
+        useDefaultListeners = true
     }
 }
 

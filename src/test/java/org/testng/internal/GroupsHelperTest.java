@@ -1,5 +1,6 @@
 package org.testng.internal;
 
+import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import org.testng.collections.Maps;
@@ -29,6 +30,7 @@ public class GroupsHelperTest {
     metaGroups.put(metaGrpName, Collections.singletonList(metaGrpName));
     Map<String, String> actual = GroupsHelper.createGroups(metaGroups, grpName);
     assertThat(actual).containsAllEntriesOf(expected);
+    Assert.assertTrue(grpName.size() == 1);
   }
 
   @DataProvider(name = "getTestData")

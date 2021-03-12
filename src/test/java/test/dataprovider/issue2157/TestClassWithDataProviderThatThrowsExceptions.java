@@ -21,7 +21,7 @@ public class TestClassWithDataProviderThatThrowsExceptions {
   @DataProvider(name = "dp")
   public static Object[][] dpWithException() {
     return new Object[][]{
-        {foo()},
+        {foo()}
     };
   }
 

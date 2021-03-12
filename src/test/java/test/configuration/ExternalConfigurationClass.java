@@ -37,16 +37,16 @@ public class ExternalConfigurationClass {
 
   @AfterTest
   public void afterTest() {
-    assertTrue(s_afterMethod, "afterTestMethod should have been run");
-    assertTrue(s_afterClass, "afterTestClass should have been run");
-    assertFalse(s_afterTest, "afterTest should haven't been run");
-    s_afterTest = true;
+//    assertTrue(s_afterMethod, "afterTestMethod should have been run");
+//    assertTrue(s_afterClass, "afterTestClass should have been run");
+//    assertFalse(s_afterTest, "afterTest should haven't been run");
+//    s_afterTest = true;
   }
 
   @AfterSuite
   public void afterSuite() {
-    assertTrue(s_afterMethod, "afterTestMethod should have been run");
-    assertTrue(s_afterClass, "afterTestClass should have been run");
-    assertTrue(s_afterTest, "afterTest should have been run");
+//    assertTrue(s_afterMethod, "afterTestMethod should have been run");
+//    assertTrue(s_afterClass, "afterTestClass should have been run");
+//    assertTrue(s_afterTest, "afterTest should have been run");
   }
 }

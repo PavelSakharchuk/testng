@@ -1,5 +1,6 @@
 package test.factory;
 
+import org.testng.Assert;
 import org.testng.TestListenerAdapter;
 import org.testng.TestNG;
 import org.testng.annotations.Test;
@@ -42,5 +43,6 @@ public class FactoryWithDataProviderTest extends SimpleBaseTest {
     testng.run();
     assertThat(listener.getLogs("test"))
         .containsExactlyElementsOf(Collections.singletonList(RANDOM_VALUE));
+//    Assert.assertFalse(true);
   }
 }

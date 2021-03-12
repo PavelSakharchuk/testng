@@ -1,4 +1,4 @@
-package test.factory.issue1041;
+package test.factory.issue1041_dp_f;
 
 import java.util.List;
 import java.util.Objects;
@@ -33,7 +33,7 @@ public class FactoryAnnotatedConstructorExample {
 
   @Test
   public void testMethod() {
-    Assert.assertTrue(data > 0);
+    Assert.assertTrue(data > 1);
   }
 
   @Override

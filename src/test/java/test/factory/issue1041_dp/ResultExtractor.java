@@ -1,8 +1,5 @@
-package test.factory.issue1041;
+package test.factory.issue1041_dp;
 
-import java.util.Arrays;
-import java.util.List;
-import java.util.Map;
 import org.testng.IReporter;
 import org.testng.IResultMap;
 import org.testng.ISuite;
@@ -11,6 +8,10 @@ import org.testng.ITestContext;
 import org.testng.ITestResult;
 import org.testng.collections.Maps;
 import org.testng.xml.XmlSuite;
+
+import java.util.Arrays;
+import java.util.List;
+import java.util.Map;
 
 public class ResultExtractor implements IReporter {
 
