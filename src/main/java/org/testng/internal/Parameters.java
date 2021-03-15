@@ -17,6 +17,7 @@ import org.testng.ITestContext;
 import org.testng.ITestNGMethod;
 import org.testng.ITestResult;
 import org.testng.TestNGException;
+import org.testng.TestRunner;
 import org.testng.annotations.IDataProviderAnnotation;
 import org.testng.annotations.IParametersAnnotation;
 import org.testng.collections.Lists;
@@ -818,8 +819,15 @@ public class Parameters {
       }
 
       // If the data provider is restricting the indices to return, filter them out
+//      List<Integer> list = new ArrayList<>();
+//      list.add(1);
+
       final List<Integer> allIndices = new ArrayList<>();
       allIndices.addAll(testMethod.getInvocationNumbers());
+//      allIndices.addAll(testMethod.getAttributes());
+//      allIndices.addAll(((TestRunner) ((FactoryMethod) testMethod).m_testContext).m_xmlTest.m_failedInvocationNumbers);
+//      allIndices.addAll(testMethod.getParameterInvocationCount());
+//      allIndices.addAll(list);
       allIndices.addAll(dataProviderMethod.getIndices());
 
       Iterator<Object[]> filteredParameters =

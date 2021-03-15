@@ -23,16 +23,19 @@ public class FactoryAnnotatedConstructorExample {
     objects.add(instance);
   }
 
+//  @DataProvider(name = "dp", indices = {1})
   @DataProvider(name = "dp")
   public static Object[][] getData() {
     return new Object[][]{
-        {1},
-        {2}
+        {123},
+        {234},
+        {345}
     };
   }
 
   @Test
   public void testMethod() {
+    System.out.println(data);
     Assert.assertTrue(data > 1);
   }
 

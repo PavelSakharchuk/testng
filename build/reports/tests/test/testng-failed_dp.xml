@@ -25,7 +25,7 @@
     <classes>
       <class name="org.testng.internal.GroupsHelperTest">
         <methods>
-          <include name="testCreateGroupsWithMetaGroups" invocation-numbers="1"/>
+          <include name="testCreateGroupsWithMetaGroups" invocation-numbers="2"/>
         </methods>
       </class> <!-- org.testng.internal.GroupsHelperTest -->
     </classes>

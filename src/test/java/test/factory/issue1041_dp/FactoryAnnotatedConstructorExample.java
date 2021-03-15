@@ -30,8 +30,8 @@ public class FactoryAnnotatedConstructorExample {
   @DataProvider(name = DP)
   public static Object[][] getData() {
     return new Object[][]{
-        {1},
-        {2}
+        {123},
+        {234}
     };
   }
 

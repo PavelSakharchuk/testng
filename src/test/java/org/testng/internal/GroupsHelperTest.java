@@ -36,7 +36,8 @@ public class GroupsHelperTest {
   @DataProvider(name = "getTestData")
   public Object[][] getTestData() {
     return new Object[][] {
-      {"bar", Collections.singletonList("foo"), constructExpectedMap("foo")},
+      {"foo", Collections.singletonList("foo"), constructExpectedMap("foo")},
+      {"foo", Collections.singletonList("bar"), constructExpectedMap("foo")},
       {"bar", Arrays.asList("foo", "bar"), constructExpectedMap("foo", "bar")}
     };
   }
