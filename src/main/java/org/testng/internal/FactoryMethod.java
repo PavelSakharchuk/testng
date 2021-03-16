@@ -1,6 +1,7 @@
 package org.testng.internal;
 
 import java.lang.reflect.Modifier;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Iterator;
@@ -118,6 +119,13 @@ public class FactoryMethod extends BaseTestMethod {
     m_testClass = tc;
     this.objectFactory = objectFactory;
     m_groups = getAllGroups(declaringClass, testContext.getCurrentXmlTest(), annotationFinder);
+
+    ITestMethodFinder testMethodFinder = new TestNGMethodFinder(new RunInfo(), annotationFinder);
+    ITestNGMethod[] testMethods = testMethodFinder.getTestMethods(declaringClass, testContext.getCurrentXmlTest());
+    List<Integer> invocationNumbers = new ArrayList<>();
+    Arrays.stream(testMethods).forEach(testMethod -> invocationNumbers.addAll(testMethod.getInvocationNumbers()));
+
+    setInvocationNumbers(invocationNumbers);
   }
 
   private static String[] getAllGroups(
