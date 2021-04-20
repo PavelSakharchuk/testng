@@ -153,11 +153,12 @@ tasks.jar {
 
 tasks.test {
     useTestNG() {
-        suites("src/test/resources/testng.xml")
+        suites("src/test/resources/testng_.xml")
         listeners.add("org.testng.reporters.FailedInformationOnConsoleReporter")
         testLogging.showStandardStreams = true
         systemProperties = mapOf("test.resources.dir" to "build/resources/test")
         maxHeapSize = "1500m"
+        useDefaultListeners = true
     }
 }
 
