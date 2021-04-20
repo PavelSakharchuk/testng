@@ -1,28 +1,14 @@
-<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
-
-<suite name="TestNG" verbose="1" parallel="false" thread-count="2"
-    data-provider-thread-count="3">
-
-  <listeners>
-    <listener class-name="org.testng.internal.ConsoleReporter"/>
-  </listeners>
-
-  <test name="Regression2">
-  <groups>
-    <run>
-      <exclude name="broken" />
-    </run>
-  </groups>
-  <classes>
-      <class name="test.failedreporter.FailedReporterTest" />
-<!--  </classes>-->
-<!--  <classes>-->
-      <class name="test.failedreporter.issue2521.DataProviderWithFactoryMultiFailedReporterTest" />
-<!--  </classes>-->
-<!--  <classes>-->
-      <class name="test.failedreporter.issue2517.DataProviderWithFactoryFailedReporterTest" />
-  </classes>
-  </test>
-
-</suite>
-
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite verbose="0" name="Failed suite [Command line suite]">
+  <test thread-count="5" verbose="0" name="Command line test(failed)">
+    <classes>
+      <class name="test.failedreporter.issue2521.DataProviderWithFactoryMultiFailedReporterSample">
+        <methods>
+          <include name="f2" invocation-numbers="1 2"/>
+          <include name="f1" invocation-numbers="0 2"/>
+        </methods>
+      </class> <!-- test.failedreporter.issue2521.DataProviderWithFactoryMultiFailedReporterSample -->
+    </classes>
+  </test> <!-- Command line test(failed) -->
+</suite> <!-- Failed suite [Command line suite] -->

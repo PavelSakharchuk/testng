@@ -21,6 +21,7 @@ public class DataProviderWithFactoryMultiFailedReporterSample {
 
     @Test
     public void f1() {
+        System.out.println("f1: " + data);
         if (data != 1) {
             throw new RuntimeException();
         }
@@ -28,6 +29,7 @@ public class DataProviderWithFactoryMultiFailedReporterSample {
 
     @Test
     public void f2() {
+        System.out.println("f2: " + data);
         if (data != 0) {
             throw new RuntimeException();
         }
